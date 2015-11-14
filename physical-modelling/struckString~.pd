@@ -1,0 +1,16 @@
+#N canvas 198 231 450 300 10;
+#X obj 150 33 inlet;
+#X obj 150 134 line~;
+#X obj 47 254 outlet~;
+#X text 191 30 A bang input is expected;
+#X obj 46 220 *~ 50;
+#X msg 150 83 1 20;
+#X msg 207 83 0 20;
+#X obj 207 50 delay 10;
+#X connect 0 0 5 0;
+#X connect 0 0 7 0;
+#X connect 1 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
