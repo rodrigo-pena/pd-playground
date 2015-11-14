@@ -1,0 +1,46 @@
+#N canvas 634 198 595 456 10;
+#X obj 153 64 inlet;
+#X obj -9 137 tri~;
+#X obj 93 137 phasor~;
+#X obj 216 137 square~;
+#X obj 33 137 == 0;
+#X obj 153 137 == 1;
+#X obj 277 138 == 2;
+#X obj 118 228 *~;
+#X obj 241 186 *~;
+#X obj 6 186 *~;
+#X obj 117 326 outlet~;
+#X obj 284 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 160 214 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 42 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X text 363 29 ** VCO **;
+#X obj 56 29 inlet;
+#X obj 103 161 -~ 0.5;
+#X obj 103 184 *~ 2;
+#X text 99 28 Wave frequency;
+#X text 194 64 3-way selector;
+#X text 247 101 Logic to select the waveform type;
+#X text 172 326 Output (chosen waveform);
+#X connect 0 0 6 0;
+#X connect 0 0 5 0;
+#X connect 0 0 4 0;
+#X connect 1 0 9 0;
+#X connect 2 0 16 0;
+#X connect 3 0 8 0;
+#X connect 4 0 9 1;
+#X connect 5 0 7 1;
+#X connect 6 0 8 1;
+#X connect 7 0 10 0;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
+#X connect 11 0 8 1;
+#X connect 12 0 7 1;
+#X connect 13 0 9 1;
+#X connect 15 0 1 0;
+#X connect 15 0 2 0;
+#X connect 15 0 3 0;
+#X connect 16 0 17 0;
+#X connect 17 0 7 0;

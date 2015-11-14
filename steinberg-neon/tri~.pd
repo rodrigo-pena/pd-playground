@@ -1,0 +1,13 @@
+#N canvas 235 313 628 139 10;
+#X obj 20 14 inlet;
+#X obj 20 46 phasor~;
+#X obj 19 76 expr~ (min($v1 \, 1 - $v1) - 0.25) * 4;
+#X obj 18 107 outlet~;
+#X text 335 13 - TRIANGLE WAVE GENERATOR -;
+#X text 65 14 Fundamental frequency;
+#X text 76 46 Sawtooth wave;
+#X text 249 75 Transform sawtooth waveform into triangle waveform;
+#X text 76 107 Audio signal output;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
